@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="ESports Training Tracker application implemented using Django.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Esports Training Tracker</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        /* Your existing CSS styles */
+        /* New body style */
+        body {
+            background-color: #e0f7fa; /* Light blue background */
+            font-family: 'Poppins', sans-serif; /* New font */
+            padding-top: 50px;
+            color: #00796b; /* Dark teal text color */
+        }
+
+        /* Heading styles */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #004d40; /* Dark teal color for headings */
+        }
+
+        /* Link styles */
+        a, p {
+            color: #00796b;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        /* Container style */
+        .container {
+            max-width: 550px;
+            margin: auto;
+            background-color: #ffffff; /* White background */
+            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+        }
+
+        /* Header bar styles */
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(90deg, #00796b, #004d40);
+        }
+
+        /* Header bar link style */
+        .header-bar a {
+            color: #e0f7fa;
+            text-decoration: none;
+        }
+
+        /* Task wrapper styles */
+        .task-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            border-top: 1px solid #b2dfdb; /* Light teal border */
+            overflow: hidden;
+        }
+
+        /* Task title styles */
+        .task-title {
+            display: flex;
+            padding: 20px;
+        }
+
+        .task-title a {
+            text-decoration: none;
+            color: #00796b;
+            margin-left: 10px;
+        }
+
+        /* Task complete and incomplete icons */
+        .task-complete-icon {
+            height: 20px;
+            width: 20px;
+            background-color: #00796b; /* Dark teal */
+            border-radius: 50%;
+        }
+
+        .task-incomplete-icon {
+            height: 20px;
+            width: 20px;
+            background-color: #b2dfdb; /* Light teal */
+            border-radius: 50%;
+        }
+
+        /* Delete link styles */
+        .delete-link {
+            text-decoration: none;
+            font-weight: bold;
+            color: #d32f2f; /* Red color for delete link */
+            font-size: 22px;
+            line-height: 0;
+            padding: 20px 0px;
+        }
+
+        /* Additional styling for other classes */
+        .handle {
+            display: inline-block;
+            padding: 20px 16px;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .handle:active {
+            cursor: grabbing;
+        }
+
+        /* Drop area styles */
+        .dropArea {
+            background-color: #e0f2f1; /* Light teal background */
+            color: black;
+            border: 1px solid #00796b; /* Dark teal border */
+        }
+
+        /* Selected task styles */
+        .selectedTask {
+            opacity: 0.6;
+        }
+
+        /* Add link styles */
+        #add-link {
+            color: #00796b; /* Dark teal */
+            text-decoration: none;
+            font-size: 42px;
+            text-shadow: 1px 1px #004d40; /* Dark shadow */
+        }
+
+        /* Search and add wrapper styles */
+        #search-add-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 320px) {
+            #search-add-wrapper {
+                padding: 10px;
+            }
+        }
+
+        /* Form input styles */
+        input[type=text], input[type=password], textarea {
+            border: 1px solid #00796b; /* Dark teal border */
+            border-radius: 5px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        /* Label styles */
+        label {
+            padding-top: 10px !important;
+            display: block;
+        }
+
+        /* Placeholder styles */
+        ::placeholder {
+            font-weight: 300;
+            opacity: 0.5;
+        }
+
+        /* Button styles */
+        .button {
+            border: 1px solid #00796b;
+            background-color: #ffffff; /* White background */
+            color: #00796b;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Card body styles */
+        .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+
+</body>
+
+</html>
